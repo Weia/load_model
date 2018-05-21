@@ -6,3 +6,6 @@ load_model.py
 view_result.py
 读取result.txt 文件，将预测点显示到图片上
 
+
+备注：要根据不同模型进行修改output的名称
+

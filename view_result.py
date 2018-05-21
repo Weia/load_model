@@ -6,7 +6,7 @@
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
-with open('./result.txt') as f:
+with open('diff_init521/521_result.txt') as f:
     results=f.readlines()
 
     for result in results:
@@ -21,12 +21,16 @@ with open('./result.txt') as f:
 
         x=label[:,0]
         y=label[:,1]
+        print(imgPath)
 
-        print(label)
-        print(x)
-        print(y)
+        # print(label)
+        # print(x)
+        # print(y)
         img=Image.open(imgPath)
+        width,height=img.size
         plt.imshow(img)
         plt.plot(x,y,'r*')
+
+        # plt.plot(x[15],y[15],'g+')
         plt.show()
 
